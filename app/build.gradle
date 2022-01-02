@@ -1,0 +1,52 @@
+plugins {
+    id 'com.android.application'
+
+}
+android {
+
+    compileSdkVersion 31
+    buildToolsVersion "30.0.3"
+    defaultConfig {
+
+        applicationId "start.theCIA"
+        multiDexEnabled true
+        minSdkVersion 21
+        //noinspection ExpiredTargetSdkVersion
+        targetSdkVersion 21
+        packagingOptions {
+            exclude 'META-INF/proguard/androidx-annotations.pro'
+        }
+
+
+    }
+
+
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation 'com.github.piasy:rxandroidaudio:1.7.0'
+        implementation 'com.github.piasy:AudioProcessor:1.7.0'
+
+
+        implementation 'com.github.dakatso:livebutton:1.0.0'
+        implementation 'com.parse:parseinterceptors:0.0.2'
+
+        //noinspection GradleCompatible
+        //implementation 'com.android.support:design:22.0.0'
+
+        //noinspection GradleCompatible
+
+        implementation 'androidx.appcompat:appcompat:1.4.0'
+
+        //noinspection GradleCompatible
+
+        //noinspection GradleCompatible
+
+        implementation 'com.github.kevalpatel2106:android-hidden-camera:v1.3.5'
+    }
+
+
+
+}
+
+

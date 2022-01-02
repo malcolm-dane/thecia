@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Restart if Killed"
+            android:layout_below="@+id/switch1"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/picAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="How Many pics to take on sensor event"
+            android:inputType="number"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/toggleButton"
+            android:layout_alignParentStart="true" />
+
+        <ToggleButton
+            android:id="@+id/button2"
+            android:layout_width="43dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/RunTime"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/radioButton"
+            android:layout_weight="0.42"
+            android:text="Set"
+            android:onClick="setAudio"/>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="SetCamera"
+            android:text="SensorCameraRecord"
+            android:layout_above="@+id/picAmount"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:onClick="buttonSave"
+            android:text="Update Config" />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toggleButton"
+            android:layout_marginTop="24dp"
+            android:text="Start Above On Boot" />
+
+        <EditText
+            android:id="@+id/interval"
+            android:layout_width="337dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/radioButton"
+            android:ems="10"
+            android:hint="How long should intervals be(Seconds)"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/RunTime"
+            android:layout_width="339dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="How many minutes to run"
+            android:inputType="number"
+            android:layout_below="@+id/interval"
+            android:layout_alignParentStart="true" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:onClick="SetAudio"
+            android:text="Sensor AudioRecord" />
+
+        <ToggleButton
+            android:id="@+id/toggleButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Set"
+            android:onClick="setPics"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
